@@ -5,13 +5,13 @@ import interfaces.*;
 
 public class LogicLoginAdminClient {
 
-   public String nickName, passWord,tipe_User,status_User;
+   public String nickName="hola", passWord="",tipe_User,status_User;
 
 
     public void ProcesoLogin(){
        //String nickname="";
        // String password="";
-        if(nickName != "" && passWord !=""){
+        if(nickName != "" && passWord != ""){
 
             if(tipe_User=="Admin" && status_User=="Active"){
                 new LoginAdminClients().dispose();
@@ -26,16 +26,17 @@ public class LogicLoginAdminClient {
             }
 
 
-
-
-        }if(nickName != "" && passWord ==""){
+        }else if(nickName != "" && passWord ==""){
 
             JOptionPane.showMessageDialog(null,"Por favor, ingrese la contrasena");
 
-        }if(nickName == "" && passWord !=""){
+        }else if(nickName == "" && passWord !=""){
 
             JOptionPane.showMessageDialog(null,"Por favor, ingrese su Nickname");
 
+        }else{
+
+            JOptionPane.showMessageDialog(null," por favor comunicarse con el administrador");
         }
     }
 }

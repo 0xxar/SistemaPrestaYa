@@ -73,15 +73,19 @@ public class LoginAdminClients extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
        String nickName="", passWord="", tipe_User="Admin",status_User="Active";
+        //nickName = txt_nick_name_user.getText().toString();
+       // passWord = txt_pass_user.getText().toString();
 
-       LogicLoginAdminClient user = new LogicLoginAdminClient();
+        LogicLoginAdminClient user = new LogicLoginAdminClient();
         user.nickName = txt_nick_name_user.getText().toString();
         user.passWord = txt_pass_user.getText().toString();
+        user.tipe_User = tipe_User;
+        user.status_User = status_User;
 
 
         if(e.getSource() == bt_show_session){
             JOptionPane.showMessageDialog(null,"Hola Mundo");
-            
+
          new LogicLoginAdminClient().ProcesoLogin();
 
 

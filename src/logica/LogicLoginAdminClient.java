@@ -5,18 +5,19 @@ import interfaces.*;
 
 public class LogicLoginAdminClient {
 
-    public String nickName, passWord,tipe_User,status_User;
+   // public String nickName, passWord,tipe_User,status_User;
 
 
-    public void ProcesoLogin(){
-        String nickname="";
-        String password="";
+    public void ProcesoLogin(String nickName,String passWord,String tipe_User,String status_User){
+       //String nickname="";
+       // String password="";
         if(nickName != "" && passWord !=""){
 
-            if(tipe_User=="Admin" && status_User=="Ative"){
-                new InterfasMainAdmin().setVisible(true);
+            if(tipe_User=="Admin" && status_User=="Active"){
+                new LoginAdminClients().dispose();
+                new InterfaceMainAdmin().setVisible(true);
 
-            } else if(tipe_User=="Client" && status_User=="Ative"){
+            } else if(tipe_User=="Client" && status_User=="Active"){
                 new InterfaceMainClient().setVisible(true);
 
             }else{

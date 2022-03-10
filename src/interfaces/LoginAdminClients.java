@@ -23,9 +23,9 @@ public class LoginAdminClients extends JFrame implements ActionListener {
         setLocationRelativeTo(null);
         getContentPane().setBackground(new Color(155,200,120));
         setTitle("Presta YaCash!");
-        FaceImage();
 
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
 
     }
@@ -47,9 +47,9 @@ public class LoginAdminClients extends JFrame implements ActionListener {
         txt_pass_user.setHorizontalAlignment(JTextField.CENTER);
         add(txt_pass_user);
 
-        bt_show_session = new JButton("Iniciar");
+        bt_show_session = new JButton("Login");
         bt_show_session.setBounds(100,210,200,40);
-        bt_show_session.setFont(new Font("Tw Cen MT",1,12));
+        bt_show_session.setFont(new Font("Andale Mono",1,16));
         bt_show_session.setHorizontalAlignment(JButton.CENTER);
         bt_show_session.addActionListener(this);
         add(bt_show_session);
@@ -65,22 +65,22 @@ public class LoginAdminClients extends JFrame implements ActionListener {
     }
 
     public static void main(String args[]) {
-        InterfaceAdmin face = new InterfaceAdmin();
-        face.setVisible(true);
+       new LoginAdminClients().setVisible(true);
 
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        String nickName, passWord;
-        nickName = txt_nick_name_user.getText().toString();
-        passWord = txt_pass_user.getText().toString();
+
+       // String nickName, passWord, tipe_User="Admin",status_User="Active";
+       // nickName = txt_nick_name_user.getText().toString();
+       // passWord = txt_pass_user.getText().toString();
+        //LogicLoginAdminClient user = new LogicLoginAdminClient();
+
         if(e.getSource() == bt_show_session){
+            JOptionPane.showMessageDialog(null,"Hola Mundo");
 
-           LogicLoginAdminClient user = new LogicLoginAdminClient();
-           if(nickName == user.nickName && passWord == user.passWord){
+         //  new LogicLoginAdminClient().ProcesoLogin(nickName,passWord,tipe_User,status_User);
 
-           }
-           txt_nick_name_user.setText(user.nickName);
 
 
         }

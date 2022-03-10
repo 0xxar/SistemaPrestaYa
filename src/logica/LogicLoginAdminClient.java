@@ -5,10 +5,10 @@ import interfaces.*;
 
 public class LogicLoginAdminClient {
 
-   // public String nickName, passWord,tipe_User,status_User;
+   public String nickName, passWord,tipe_User,status_User;
 
 
-    public void ProcesoLogin(String nickName,String passWord,String tipe_User,String status_User){
+    public void ProcesoLogin(){
        //String nickname="";
        // String password="";
         if(nickName != "" && passWord !=""){

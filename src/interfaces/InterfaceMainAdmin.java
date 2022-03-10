@@ -15,6 +15,7 @@ public class InterfaceMainAdmin extends JFrame implements ActionListener {
         setLocationRelativeTo(null);
         setTitle("Main Principal Admin");
 
+
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
     }

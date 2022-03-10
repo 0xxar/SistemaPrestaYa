@@ -23,6 +23,7 @@ public class LoginAdminClients extends JFrame implements ActionListener {
         setLocationRelativeTo(null);
         getContentPane().setBackground(new Color(155,200,120));
         setTitle("Presta YaCash!");
+        FaceImage();
 
 
         setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
@@ -71,15 +72,17 @@ public class LoginAdminClients extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-       // String nickName, passWord, tipe_User="Admin",status_User="Active";
-       // nickName = txt_nick_name_user.getText().toString();
-       // passWord = txt_pass_user.getText().toString();
-        //LogicLoginAdminClient user = new LogicLoginAdminClient();
+       String nickName="", passWord="", tipe_User="Admin",status_User="Active";
+
+       LogicLoginAdminClient user = new LogicLoginAdminClient();
+        user.nickName = txt_nick_name_user.getText().toString();
+        user.passWord = txt_pass_user.getText().toString();
+
 
         if(e.getSource() == bt_show_session){
             JOptionPane.showMessageDialog(null,"Hola Mundo");
-
-         //  new LogicLoginAdminClient().ProcesoLogin(nickName,passWord,tipe_User,status_User);
+            
+         new LogicLoginAdminClient().ProcesoLogin();
 
 
 
